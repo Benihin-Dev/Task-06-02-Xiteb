@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.menu{
+  @apply   hover:transform transform ease-in-out duration-100 py-1 px-3 hover:rounded-full hover:bg-green-400 hover:text-white
+}
+
+.filterBtn {
+  @apply  m-2 rounded-full border-gray-300 hover:bg-green-400 py-1 hover:text-white px-16 border text-sm transform duration-150 md:text-base
+}
