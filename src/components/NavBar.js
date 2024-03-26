@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/logo.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [showProvinceMenu, setShowProvinceMenu] = useState(false);
@@ -107,17 +108,20 @@ export default function NavBar() {
                 </div>
               )}
             </li>
-
-            <li className=" flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer">
-              Review
-            </li>
+            <Link to="/review">
+              <li className=" flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer">
+                Review
+              </li>
+            </Link>
             <li className=" flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer">
               More
             </li>
           </ul>
-          <button className=" sm:ml-2 bg-gray-900 hover:bg-black border text-white pb-[3px] px-5 rounded-full duration-[150ms]">
-            Login
-          </button>
+          <Link to="/login">
+            <button className=" sm:ml-2 bg-gray-900 hover:bg-black border text-white pb-[3px] px-5 rounded-full duration-[150ms]">
+              Login
+            </button>
+          </Link>
           <PiDotsSixVerticalBold
             onClick={() => {
               setnavSubElemnetsState(!navSubElemnetsState);
@@ -126,7 +130,7 @@ export default function NavBar() {
           />
           {navSubElemnetsState && (
             <ul
-              className={`absolute top-[110%] border w-10/12 pl-8 bg-white space-y-2 border-b-4 pb-1 pt-2 sm:hidden gap-6`}
+              className={`absolute text-[18px] top-[110%] border w-10/12 pl-8 bg-white space-y-2 border-b-4 pb-1 pt-2 sm:hidden gap-6`}
             >
               <li
                 onMouseEnter={() => {
@@ -135,7 +139,7 @@ export default function NavBar() {
                 onMouseLeave={() => {
                   setShowProvinceMenu(!showProvinceMenu);
                 }}
-                className=" gap-4 relative flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b "
+                className=" pb-1 gap-4 relative flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b "
               >
                 Province
                 <MdKeyboardArrowDown
@@ -148,7 +152,7 @@ export default function NavBar() {
                     {provinces.map((province, index) => (
                       <button
                         id={index}
-                        className=" border-b w-full text-start px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
+                        className=" border-b w-full text-center px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                       >
                         {province}
                       </button>
@@ -163,7 +167,7 @@ export default function NavBar() {
                 onMouseLeave={() => {
                   setShowDistrictMenu(!showDistrictMenu);
                 }}
-                className=" gap-4 relative flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b"
+                className=" pb-1 gap-4 relative flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b"
               >
                 District
                 <MdKeyboardArrowDown
@@ -176,7 +180,7 @@ export default function NavBar() {
                     {districts.map((district, index) => (
                       <button
                         id={index}
-                        className=" border-b w-full text-start px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
+                        className=" border-b w-full text-center px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                       >
                         {district}
                       </button>
@@ -184,10 +188,12 @@ export default function NavBar() {
                   </div>
                 )}
               </li>
-              <li className=" flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b">
-                Review
-              </li>
-              <li className=" flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer">
+              <Link to="/review">
+                <li className=" pb-1 flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b">
+                  Review
+                </li>
+              </Link>
+              <li className=" pb-1 flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer">
                 More
               </li>
             </ul>

@@ -41,7 +41,7 @@ export default function SearchBox() {
           Search
         </button>
       </div>
-      <div className="searchBoxComponent slideFromLeft w-full sm:w-10/12 md:w-8/12 mx-auto mt-2 sm:px-5 text-sm">
+      <div className="searchBoxComponent slideFromLeft w-full sm:w-10/12 md:w-8/12 mx-auto mt-2 sm:px-5 sm:text-sm text-[16px]">
         {searchPlaces.map((place, index) => (
           <button
             id={index}
