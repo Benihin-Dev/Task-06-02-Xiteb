@@ -126,7 +126,7 @@ export default function NavBar() {
           />
           {navSubElemnetsState && (
             <ul
-              className={`absolute top-[110%] border w-3/5 pl-5 bg-white space-y-2 border-b-4 pb-1 pt-2 sm:hidden gap-6`}
+              className={`absolute top-[110%] border w-10/12 pl-8 bg-white space-y-2 border-b-4 pb-1 pt-2 sm:hidden gap-6`}
             >
               <li
                 onMouseEnter={() => {
@@ -143,7 +143,7 @@ export default function NavBar() {
                 />
                 {showProvinceMenu && (
                   <div
-                    className={` z-20 absolute w-[100%] left-[0px] top-[100%] h-36 border overflow-y-scroll overflow-x-hidden mb-10 bg-white custom border-b-2`}
+                    className={` z-20 absolute w-[100%] left-[0px] top-[100%] border overflow-y-scroll overflow-x-hidden mb-10 bg-white custom border-b-2`}
                   >
                     {provinces.map((province, index) => (
                       <button
@@ -171,7 +171,7 @@ export default function NavBar() {
                 />
                 {showDistrictMenu && (
                   <div
-                    className={` absolute w-[100%] left-[0px] top-[100%] h-36 border overflow-y-scroll overflow-x-hidden mb-5 bg-white custom border-b-2`}
+                    className={` absolute w-[100%] left-[0px] top-[100%] h-52 border overflow-y-scroll overflow-x-hidden mb-5 bg-white custom border-b-2`}
                   >
                     {districts.map((district, index) => (
                       <button

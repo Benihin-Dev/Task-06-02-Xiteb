@@ -83,7 +83,7 @@ export default function IntroPage() {
     useState(0);
   var position = "translate-x-[" + xAxisPositionForPopularity + "px]";
   return (
-    <div className=" w-11/12 sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-10 ">
+    <div className=" w-11/12 sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-16 ">
       <div className=" w-full sm:w-10/12 md:w-8/12 mx-auto border  rounded-full shadow hover:shadow-md duration-300 flex items-center px-2  py-[7px]">
         <HiMagnifyingGlass className=" ml-2 size-6 text-gray-600" />
         <input
