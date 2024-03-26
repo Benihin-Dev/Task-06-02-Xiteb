@@ -11,3 +11,89 @@
 .custom::-webkit-scrollbar-track {
   background-color: #ffffff00;
 }
+
+.animated-component {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animated-component.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slideFromRight {
+  animation: fromRight 0.5s ease-in-out;
+}
+
+@keyframes fromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideFromLeft {
+  animation: fromLeft 0.5s ease-in-out;
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.loadingDot:first-child {
+  animation: addDotColor 1000ms infinite alternate;
+}
+.loadingDot:nth-child(2) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 200ms;
+}
+.loadingDot:nth-child(3) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 400ms;
+}
+.loadingDot:nth-child(4) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 600ms;
+}
+.loadingDot:nth-child(5) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 800ms;
+}
+.loadingDot:nth-child(6) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 800ms;
+}
+.loadingDot:nth-child(7) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 800ms;
+}
+.loadingDot:nth-child(8) {
+  animation: addDotColor 1000ms infinite alternate;
+  animation-delay: 800ms;
+}
+
+@keyframes addDotColor {
+  from {
+    background-color: #ffffff;
+    width: 8px;
+    height: 8px;
+  }
+  to {
+    background-color: rgb(227, 222, 222);
+    width: 9px;
+    height: 9px;
+  }
+}

@@ -1,14 +1,26 @@
+import { useState, useEffect } from "react";
 import "./App.css";
-import Footer from "./components/Footer";
-import IntroPage from "./components/IntroPage";
-import NavBar from "./components/NavBar";
+import Loader from "./components/Loader";
+import MainPages from "./components/MainPages";
 
 function App() {
+  const [showLoader, setShowLoader] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 3500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <NavBar />
-      <IntroPage />
-      <Footer />
+      {showLoader && <Loader />}
+
+      {!showLoader && (
+        <div>
+          <MainPages />
+        </div>
+      )}
     </>
   );
 }

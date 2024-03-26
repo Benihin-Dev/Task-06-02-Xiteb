@@ -47,7 +47,7 @@ export default function NavBar() {
   const [navSubElemnetsState, setnavSubElemnetsState] = useState(false);
   return (
     <div className=" fixed w-full z-20 mt-[-40px] bg-[#fff5]">
-      <div className=" w-11/12 sm:w-10/12 lg:w-9/12 mx-auto flex items-end justify-between mt-0 pb-2 pt-1 bg-[#ffffffbb]">
+      <div className=" w-11/12 sm:w-10/12 lg:w-9/12 lg:px-10 mx-auto flex items-end justify-between mt-0 pb-2 pt-1 bg-[#ffffffbb]">
         <img className=" h-12" src={logo} alt="" />
         <div className=" flex gap-5 items-center w-9/12 justify-end relative">
           <ul className={` hidden sm:flex gap-6`}>
