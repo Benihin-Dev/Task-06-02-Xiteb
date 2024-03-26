@@ -53,35 +53,42 @@
   }
 }
 
+.slideDown {
+  animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .loadingDot:first-child {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
 }
 .loadingDot:nth-child(2) {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
   animation-delay: 200ms;
 }
 .loadingDot:nth-child(3) {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
   animation-delay: 400ms;
 }
 .loadingDot:nth-child(4) {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
   animation-delay: 600ms;
 }
 .loadingDot:nth-child(5) {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
   animation-delay: 800ms;
 }
 .loadingDot:nth-child(6) {
-  animation: addDotColor 1000ms infinite alternate;
-  animation-delay: 800ms;
-}
-.loadingDot:nth-child(7) {
-  animation: addDotColor 1000ms infinite alternate;
-  animation-delay: 800ms;
-}
-.loadingDot:nth-child(8) {
-  animation: addDotColor 1000ms infinite alternate;
+  animation: addDotColor 500ms infinite alternate;
   animation-delay: 800ms;
 }
 
@@ -92,8 +99,8 @@
     height: 8px;
   }
   to {
-    background-color: rgb(227, 222, 222);
-    width: 9px;
-    height: 9px;
+    background-color: rgb(184, 177, 177);
+    width: 8px;
+    height: 8px;
   }
 }

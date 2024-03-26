@@ -1,45 +1,12 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { MdArrowForwardIos } from "react-icons/md";
-import dutchFortImg from "../../images/dutchFort.png";
-import kandyImg from "../../images/Kandy.jpg";
-import jaffnaBeachImg from "../../images/jaffna-beachesOG.jpg";
-import nuwaraImg from "../../images/nuwara-eliya-highlights.jpg";
-import polanaruwaImg from "../../images/polannaruwa.jpg";
-import ruwanImg from "../../images/ruwan.png";
-import trincoImg from "../../images/tringo.jpg";
+import { useData } from "../MainContextProvider";
+import { Link } from "react-router-dom";
 
 export default function FeaturedDestinations() {
-  const [featuredDestinations, setFeaturedDestinations] = useState([
-    {
-      name: "Nuwara-Eliya",
-      imgage: nuwaraImg,
-    },
-    {
-      name: "Kandy",
-      imgage: kandyImg,
-    },
-    {
-      name: "Galle",
-      imgage: dutchFortImg,
-    },
-    {
-      name: "Trincomalee",
-      imgage: trincoImg,
-    },
-    {
-      name: "Polonnaruwa",
-      imgage: polanaruwaImg,
-    },
-    {
-      name: "Jaffna",
-      imgage: jaffnaBeachImg,
-    },
-    {
-      name: "Anurathapura",
-      imgage: ruwanImg,
-    },
-  ]);
+  const { featuredDestinations, setSelectedDistrictIndex } = useData();
+
   const [xAxisPositionForPopularity, setXAxisPositionForPopularity] =
     useState(0);
   var position = "translate-x-[" + xAxisPositionForPopularity + "px]";
@@ -58,11 +25,16 @@ export default function FeaturedDestinations() {
         <div className={` absolute top-2 gap-4 flex px-4`}>
           {featuredDestinations.map((place, index) => (
             <div id={index} className=" w-52">
-              <img
-                src={place.imgage}
-                alt=""
-                className="h-36 rounded-md overflow-hidden shadow-lg hover:scale-[1.02]  duration-200 hover:shadow-[#aaabac]"
-              />
+              <Link to="/districtComponent">
+                <img
+                  onClick={() => {
+                    setSelectedDistrictIndex(index);
+                  }}
+                  src={place.imgage}
+                  alt=""
+                  className=" cursor-pointer h-36 rounded-md overflow-hidden shadow-lg hover:scale-[1.02]  duration-200 hover:shadow-[#aaabac]"
+                />
+              </Link>
               <p className=" z-20 pt-1 font-[400] ">{place.name}</p>
             </div>
           ))}

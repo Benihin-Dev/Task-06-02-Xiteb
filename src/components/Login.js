@@ -24,7 +24,7 @@ export default function Login() {
           <div className="loginTextComponent slideFromLeft w-full px-5 sm:border-r pt-5 sm:mb-0 mb-16">
             <div className="">
               <h1 className=" text-xl">Checkout as a new customer</h1>
-              <p className=" md:pr-20">
+              <p className=" md:pr-20 text-gray-500 leading-5">
                 Porem ipsum dolor sit amet, consectetur adipiscing elit Nunc
                 vulputate libero et velit ihrf riyhwoy
               </p>

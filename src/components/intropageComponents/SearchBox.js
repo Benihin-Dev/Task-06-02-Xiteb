@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useData } from "../MainContextProvider";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 
 export default function SearchBox() {
+  const { miniSearchBoxStatus, setminiSearchBoxStatus } = useData();
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
+
+  if (inView === true) {
+    setminiSearchBoxStatus(false);
+  }
   const [searchPlaces, setSearchPlaces] = useState([
     "Historical Places",
     "Natural Wonders",
@@ -28,7 +39,10 @@ export default function SearchBox() {
   }, []);
   return (
     <>
-      <div className="searchBoxComponent slideFromLeft w-full sm:w-10/12 md:w-8/12 mx-auto border  rounded-full shadow hover:shadow-md duration-300 flex items-center px-2  py-[7px]">
+      <div
+        ref={ref}
+        className="searchBoxComponent slideFromLeft w-full sm:w-10/12 md:w-8/12 mx-auto border  rounded-full shadow hover:shadow-md duration-300 flex items-center px-2  py-[7px]"
+      >
         <HiMagnifyingGlass className=" ml-2 size-6 text-gray-600" />
         <input
           className=" px-2 outline-none w-full"

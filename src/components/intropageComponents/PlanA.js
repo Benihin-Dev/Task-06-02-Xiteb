@@ -1,13 +1,19 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { useData } from "../MainContextProvider";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import top1Img from "../../images/top1.jpg";
 
 export default function PlanA() {
+  const { miniSearchBoxStatus, setminiSearchBoxStatus } = useData();
+
   const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
+    threshold: 0.2,
+    triggerOnce: false,
   });
+  if (inView === true) {
+    setminiSearchBoxStatus(true);
+  }
   return (
     <div
       ref={ref}
