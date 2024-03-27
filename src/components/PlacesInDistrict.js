@@ -1,23 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useData } from "./MainContextProvider";
 import { TiStarFullOutline } from "react-icons/ti";
 
 export default function PlacesInDistrict() {
+  const [isRendered, setIsRendered] = useState(false);
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      const element = document.querySelector(".photoComponent");
-      const element1 = document.querySelector(".textComponent");
-      const element2 = document.querySelector(".textComponent1");
+    if (!isRendered) {
+      window.scrollTo(0, 0);
+      setIsRendered(true);
+    }
+  }, [isRendered]);
 
-      element.classList.remove("slideFromLeft");
-      element1.classList.remove("slideFromRight");
-      element2.classList.remove("slideFromRight");
-    }, 500);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, []);
   const { featuredDestinations, selectedDistrictIndex } = useData();
   return (
     <div className="w-11/12 sm:w-10/12 lg:pr-5 lg:w-8/12 mx-auto mt-10 pt-10 ">

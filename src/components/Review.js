@@ -1,22 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { TbPhotoPlus } from "react-icons/tb";
 import { TiStarFullOutline } from "react-icons/ti";
 
 export default function Review() {
+  const [isRendered, setIsRendered] = useState(false);
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      const element1 = document.querySelector(".reviewComponent");
-
-      element1.classList.remove("slideFromLeft");
-    }, 500);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, []);
+    if (!isRendered) {
+      window.scrollTo(0, 0);
+      setIsRendered(true);
+    }
+  }, [isRendered]);
   return (
-    <div className="reviewComponent slideFromLeft w-full sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-16 ">
+    <div className=" slideFromLeft w-full sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-16 ">
       <div className=" w-11/12 sm:w-10/12 mx-auto border rounded-sm shadow-md mb-16 px-5 py-3 bg-gray-100">
         <div className=" flex justify-between ">
           <p className="  font-semibold">Review</p>

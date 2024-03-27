@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { useData } from "./MainContextProvider";
+import React, { useState } from "react";
 import logo from "../images/logo.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import {
-  Link as ScrollLink,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import MiniSearchBtn from "./MiniSearchBtn";
 
 export default function NavBar() {
-  const { miniSearchBoxStatus, setminiSearchBoxStatus } = useData();
   const [showProvinceMenu, setShowProvinceMenu] = useState(false);
   const [showDistrictMenu, setShowDistrictMenu] = useState(false);
-  const [provinces, setProvinces] = useState([
+  const [provinces] = useState([
     "Central",
     "Eastern",
     "Northern",
@@ -28,7 +21,7 @@ export default function NavBar() {
     "Uva",
     "Western",
   ]);
-  const [districts, setDistricts] = useState([
+  const [districts] = useState([
     "Ampara",
     "Anuradhapura",
     "Badulla",
@@ -57,9 +50,6 @@ export default function NavBar() {
   ]);
   const [navSubElemnetsState, setnavSubElemnetsState] = useState(false);
 
-  useEffect(() => {
-    scrollSpy.update();
-  }, []);
   return (
     <div className=" fixed w-full z-20 mt-[-40px] bg-[#fff5]">
       <div className=" relative w-11/12 sm:w-10/12 lg:w-9/12 lg:px-10 mx-auto flex items-end justify-between mt-0 pb-2 pt-1 bg-[#ffffffbb]">
@@ -92,7 +82,7 @@ export default function NavBar() {
                 >
                   {provinces.map((province, index) => (
                     <button
-                    key={index}
+                      key={index}
                       className=" border-b w-full text-start px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                     >
                       {province}

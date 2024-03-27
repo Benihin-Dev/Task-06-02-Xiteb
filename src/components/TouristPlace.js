@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useData } from "./MainContextProvider";
 import { TiStarFullOutline } from "react-icons/ti";
 import { SiSitepoint } from "react-icons/si";
@@ -7,23 +7,13 @@ import { TbPhotoPlus } from "react-icons/tb";
 
 export default function TouristPlace() {
   const { popularity, selectedPalceIndex } = useData();
+  const [isRendered, setIsRendered] = useState(false);
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      const element = document.querySelector(".photoComponent");
-      const element1 = document.querySelector(".textComponent");
-      const element2 = document.querySelector(".textComponent1");
-      const element3 = document.querySelector(".textComponent2");
-
-      element.classList.remove("slideFromLeft");
-      element1.classList.remove("slideFromRight");
-      element2.classList.remove("slideFromRight");
-      element3.classList.remove("slideDown");
-    }, 500);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, []);
+    if (!isRendered) {
+      window.scrollTo(0, 0);
+      setIsRendered(true);
+    }
+  }, [isRendered]);
 
   return (
     <>

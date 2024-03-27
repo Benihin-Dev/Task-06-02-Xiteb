@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import Login from "../components/Login";
 import IntroPage from "../components/IntroPage";
 import Footer from "../components/Footer";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Review from "./Review";
 import { MainContextProvider } from "./MainContextProvider";
 import TouristPlace from "./TouristPlace";
