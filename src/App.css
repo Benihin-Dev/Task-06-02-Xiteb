@@ -1,3 +1,5 @@
+
+
 .custom::-webkit-scrollbar {
   width: 4px;
   height: 0px;
@@ -69,27 +71,27 @@
 }
 
 .loadingDot:first-child {
-  animation: addDotColor 500ms infinite alternate;
+  animation: addDotColor 400ms infinite alternate;
 }
 .loadingDot:nth-child(2) {
-  animation: addDotColor 500ms infinite alternate;
+  animation: addDotColor 400ms infinite alternate;
   animation-delay: 200ms;
 }
 .loadingDot:nth-child(3) {
-  animation: addDotColor 500ms infinite alternate;
+  animation: addDotColor 400ms infinite alternate;
   animation-delay: 400ms;
 }
 .loadingDot:nth-child(4) {
-  animation: addDotColor 500ms infinite alternate;
+  animation: addDotColor 400ms infinite alternate;
   animation-delay: 600ms;
 }
 .loadingDot:nth-child(5) {
-  animation: addDotColor 500ms infinite alternate;
-  animation-delay: 800ms;
+  animation: addDotColor 400ms infinite alternate;
+  animation-delay: 600ms;
 }
 .loadingDot:nth-child(6) {
-  animation: addDotColor 500ms infinite alternate;
-  animation-delay: 800ms;
+  animation: addDotColor 400ms infinite alternate;
+  animation-delay: 600ms;
 }
 
 @keyframes addDotColor {

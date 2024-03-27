@@ -13,14 +13,14 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <>
+    <div className=" font-ubuntu">
       {showLoader && <Loader />}
       {!showLoader && (
-        <div>
+        <div className="">
           <MainPages />
         </div>
       )}
-    </>
+    </div>
   );
 }
 

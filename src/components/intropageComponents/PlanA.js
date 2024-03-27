@@ -5,14 +5,14 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import top1Img from "../../images/top1.jpg";
 
 export default function PlanA() {
-  const { miniSearchBoxStatus, setminiSearchBoxStatus } = useData();
+  const { updateminiSearchBoxStatus } = useData();
 
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
   if (inView === true) {
-    setminiSearchBoxStatus(true);
+    updateminiSearchBoxStatus(true);
   }
   return (
     <div
@@ -26,7 +26,7 @@ export default function PlanA() {
           Discover the enchanting landscapes and cultural richness of Sri Lanka
           on a mesmerizing trip
         </p>
-        <div className=" flex w-full items-center gap-2 mt-5 px-2 rounded-full hover:shadow-md duration-300 py-1 border shadow-sm focus:border-gray-500">
+        <div className=" flex w-full items-center gap-2 mt-5 px-2 rounded-full hover:shadow-md duration-300 py-[5px] border shadow-sm focus:border-gray-500">
           <input
             type="text"
             className="pl-2 w-full outline-none text-sm"

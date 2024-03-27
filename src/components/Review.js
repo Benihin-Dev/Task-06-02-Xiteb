@@ -20,7 +20,7 @@ export default function Review() {
       <div className=" w-11/12 sm:w-10/12 mx-auto border rounded-sm shadow-md mb-16 px-5 py-3 bg-gray-100">
         <div className=" flex justify-between ">
           <p className="  font-semibold">Review</p>
-          <FaRegCalendarAlt className=" size-5" />
+          <FaRegCalendarAlt className=" size-5 cursor-pointer" />
         </div>
         <div className=" mt-3  shadow-sm hover:shadow-md bg-white hover:border-gray-300 w-9/12 mx-auto border py-2 rounded-md flex items-center justify-center">
           <p> + Add The Place</p>

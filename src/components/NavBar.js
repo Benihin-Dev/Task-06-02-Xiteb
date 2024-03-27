@@ -92,7 +92,7 @@ export default function NavBar() {
                 >
                   {provinces.map((province, index) => (
                     <button
-                      id={index}
+                    key={index}
                       className=" border-b w-full text-start px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                     >
                       {province}
@@ -120,7 +120,7 @@ export default function NavBar() {
                 >
                   {districts.map((district, index) => (
                     <button
-                      id={index}
+                      key={index}
                       className=" border-b w-full text-start px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                     >
                       {district}
@@ -176,7 +176,7 @@ export default function NavBar() {
                   >
                     {provinces.map((province, index) => (
                       <button
-                        id={index}
+                        key={index}
                         className=" border-b w-full text-center px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                       >
                         {province}
@@ -204,7 +204,7 @@ export default function NavBar() {
                   >
                     {districts.map((district, index) => (
                       <button
-                        id={index}
+                        key={index}
                         className=" border-b w-full text-center px-1 pt-1 text-gray-600 hover:bg-gray-50 hover:text-black   border-gray-100"
                       >
                         {district}
@@ -214,7 +214,7 @@ export default function NavBar() {
                 )}
               </li>
               <Link to="/review">
-                <li className=" pb-1 flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b">
+                <li className="pt-2 pb-1 flex items-center text-gray-500 hover:text-black duration-200 cursor-pointer border-b">
                   Review
                 </li>
               </Link>

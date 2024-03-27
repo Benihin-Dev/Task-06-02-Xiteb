@@ -38,8 +38,8 @@ export default function PlacesInDistrict() {
                 Lorem ipsum dolor sit amet consectetur.
               </p>
               <p className=" text-xs sm:text-sm leading-4 px2 sm:px-4 mt-5">
-                Lorem ipsum dolor, sit amet consecteturirfhuhf 99fwh f
-                adipisicing elsequuntur, laborum.
+                Lorem ipsum dolor, sit amet consecteturirfhuhf 99fwh f untur,
+                laborum.
               </p>
             </div>
           </div>
@@ -54,13 +54,12 @@ export default function PlacesInDistrict() {
                 Lorem ipsum dolor sit amet consectetur.
               </p>
               <p className=" text-xs sm:text-sm leading-4 px2 sm:px-4 mt-5">
-                Lorem ipsum dolor, sit amet consecteturirfhuhf 99fwh f
-                adipisicing elsequuntur, laborum.
+                Lorem ipsum dolor, sit amet consecr, laborum.
               </p>
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-3 gap-3 mt-8 px-3">
+        <div className=" grid grid-cols-3 gap-3 mt-4 sm:mt-8 px-3">
           <div className=" w-full relative">
             <img
               src={featuredDestinations[selectedDistrictIndex].imgage}
@@ -120,7 +119,7 @@ export default function PlacesInDistrict() {
           </div>
         </div>
       </div>
-      <div className="textComponent slideFromRight w-full mt-20">
+      <div className="textComponent slideFromRight w-full mt-16 sm:mt-20">
         <h1 className=" w-8/12 border-b pb-2 pt-2 font-semibold">
           Beach of fun
         </h1>

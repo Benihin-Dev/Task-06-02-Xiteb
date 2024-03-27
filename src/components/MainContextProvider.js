@@ -76,6 +76,10 @@ export const MainContextProvider = ({ children }) => {
     { name: "Pasikudah Beach", imgage: beachImg },
   ]);
 
+  const updateminiSearchBoxStatus = (newState) => {
+    setminiSearchBoxStatus(newState);
+  };
+
   return (
     <DataContext.Provider
       value={{
@@ -89,6 +93,7 @@ export const MainContextProvider = ({ children }) => {
         setSelectedPalceIndex,
         selectedDistrictIndex,
         setSelectedDistrictIndex,
+        updateminiSearchBoxStatus
       }}
     >
       {children}

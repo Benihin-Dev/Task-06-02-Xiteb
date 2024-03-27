@@ -9,7 +9,7 @@ import { Element } from "react-scroll";
 export default function IntroPage() {
   const [miniSearchBoxStatus, setMiniSearchBoxStatus] = useState(false);
   return (
-    <div className=" w-11/12 sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-16 ">
+    <div className=" font-ubuntu w-11/12 sm:w-10/12 lg:w-8/12 mx-auto mt-10 pt-16 ">
       <Element name="searchBar">
         <SeachBox />
       </Element>

@@ -25,7 +25,7 @@ export default function Popularity() {
       <div className="relative overflow-x-scroll overflow-y-hidden custom h-52">
         <div className={` absolute top-2 gap-4 flex px-4 ${position}`}>
           {popularity.map((place, index) => (
-            <div id={index} className=" w-52">
+            <div key={index} className=" w-52">
               <Link to="/touristPlaceComponent">
                 <img
                   onClick={() => {
