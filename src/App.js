@@ -17,7 +17,7 @@ function App() {
       {showLoader && <Loader />}
       {!showLoader && <HomePage />}
     </div>
-  );
+  );  
 }
 
 export default App;

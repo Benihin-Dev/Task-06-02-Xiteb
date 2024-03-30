@@ -5,17 +5,17 @@ import weekShowerImg from "../images/weekShower.png";
 
 export default function TimeManage() {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.3,
     triggerOnce: true,
   });
   return (
-    <div
-      ref={ref}
-      className={`animated-component ${
-        inView ? "is-visible" : ""
-      } w-full bg-[#f2f6ff] pt-20 pb-10 sm:pb-20`}
-    >
-      <div className=" w-11/12 sm:w-9/12 items-center mx-auto sm:flex text-[#1433ff] pt-12 pb-5">
+    <div className={` w-full bg-[#f2f6ff] pt-20 pb-10 sm:pb-20`}>
+      <div
+        ref={ref}
+        className={`animated-component ${
+          inView ? "is-visible" : ""
+        } w-11/12 sm:w-9/12 items-center mx-auto sm:flex text-[#1433ff] pt-12 pb-5`}
+      >
         <div className=" sm:w-6/12 px-5">
           <div className="  w-full flex ">
             <div className=" w-1/2">

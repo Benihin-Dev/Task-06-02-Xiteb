@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import logoImg from "../images/logoWhite.png";
 import logoImg2 from "../images/logoBlue.png";
 
@@ -38,7 +39,9 @@ export default function Footer() {
         </div>
         <div className=" sm:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-[3vw]">
           {footerContent.map((content, index) => (
-            <p className=" hover:text-[#fc4141] duration-200">{content}</p>
+            <p key={index} className=" hover:text-[#fc4141] duration-200">
+              {content}
+            </p>
           ))}
         </div>
         <div className=" sm:hidden flex justify-around items-center sm:w-1/2 mt-5">
@@ -66,9 +69,10 @@ export default function Footer() {
         spy={true}
         offset={-150}
       >
-        <button className=" absolute top-1 right-5 py-2 px-4 sm:py-[7px] sm:px-6 shadow-lg rounded-full bg-[#ff6262] hover:bg-[#fc4141] duration-200">
-          Scroll up
-        </button>
+        <div className=" absolute top-[-5%] right-5 py-1 px-4 items-center justify-center  flex shadow-lg rounded-full cursor-pointer bg-[#ff6262] hover:bg-[#fc4141] duration-200">
+          <MdKeyboardDoubleArrowUp className=" size-5" />
+          <button className=" ">Scroll up</button>
+        </div>
       </Link>
     </div>
   );

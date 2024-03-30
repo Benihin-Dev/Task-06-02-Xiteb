@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import cardCornerImg from "../images/cardCornerPic.png";
 import cardCornerLogo from "../images/cartCornerLogo.png";
 import visaImg from "../images/visaText.png";
@@ -9,9 +10,18 @@ import { IoCheckmark } from "react-icons/io5";
 export default function Pricing() {
   const [leftCardColor, setLeftCardColor] = useState("bg-[#12183d]");
   const [rightCardColor, setRightCardColor] = useState("bg-[#646a9c]");
+  const { ref, inView } = useInView({
+    threshold: 0.07,
+    triggerOnce: true,
+  });
   return (
     <div className=" w-full bg-[#f2f6ff] py-10">
-      <div className=" w-11/12 sm:w-9/12 items-center mx-auto text-[#1433ff] pt-12 pb-5">
+      <div
+        ref={ref}
+        className={`animated-component ${
+          inView ? "is-visible" : ""
+        } w-11/12 sm:w-9/12 items-center mx-auto text-[#1433ff] pt-12 pb-5`}
+      >
         <div className=" text-center">
           <p className=" w-full text-4xl font-semibold">
             An exceptional service,
@@ -23,7 +33,7 @@ export default function Pricing() {
         </div>
         <div className="hidden sm:flex w-full mt-20 text-[#12183d]">
           <div className=" w-1/2">
-            <div className="w-11/12 mx-auto border rounded-3xl overflow-hidden bg-white">
+            <div className="w-11/12 mx-auto border rounded-3xl overflow-hidden shadow-lg bg-white">
               <p className=" w-full text-center mt-10 text-3xl font-semibold">
                 Free
               </p>
@@ -118,7 +128,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className=" w-1/2">
-            <div className="w-11/12 mx-auto border rounded-3xl overflow-hidden bg-white">
+            <div className="w-11/12 mx-auto border rounded-3xl overflow-hidden shadow-lg bg-white">
               <p className=" w-full text-center mt-10 text-3xl font-semibold">
                 Premium
               </p>
@@ -217,7 +227,7 @@ export default function Pricing() {
         <div className="  sm:hidden flex w-full mt-20 text-[#12183d] relative h-[300vw] sm:h-full sm:overflow-hidden overflow-x-scroll overflow-y-hidden">
           <div className=" absolute sm:relative top-0 h-full gap-4 flex">
             <div className=" w-1/2">
-              <div className="w-[90vw] mx-auto border rounded-3xl overflow-hidden bg-white">
+              <div className="w-[90vw] mx-auto border rounded-3xl overflow-hidden bg-white shadow-lg">
                 <p className=" w-full text-center mt-10 text-3xl font-semibold">
                   Free
                 </p>
@@ -312,7 +322,7 @@ export default function Pricing() {
               </div>
             </div>
             <div className=" w-1/2">
-              <div className="w-[90vw] mx-auto border rounded-3xl overflow-hidden bg-white">
+              <div className="w-[90vw] mx-auto border rounded-3xl overflow-hidden bg-white shadow-lg">
                 <p className=" w-full text-center mt-10 text-3xl font-semibold">
                   Premium
                 </p>

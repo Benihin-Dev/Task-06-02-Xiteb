@@ -9,13 +9,12 @@ export default function SupportConversation() {
     triggerOnce: true,
   });
   return (
-    <div
-      ref={ref}
-      className={`animated-component ${
-        inView ? "is-visible" : ""
-      }  w-full bg-[#f2f6ff] pt-0 sm:pt-10`}
-    >
-      <div className=" w-11/12 sm:w-9/12 mx-auto items-center sm:flex text-[#1433ff] pt-12 pb-5">
+    <div className={`  w-full bg-[#f2f6ff] pt-0 sm:pt-10`}>
+      <div
+        ref={ref}
+        className={`animated-component ${inView ? "is-visible" : ""}
+      w-11/12 sm:w-9/12 mx-auto items-center sm:flex text-[#1433ff] pt-12 pb-5`}
+      >
         <div className=" sm:px-10 px-5 sm:w-6/12 mt-10 sm:mt-0 ">
           <h1 className=" text-3xl sm:text-[3vw] sm:leading-[3vw] font-bold">
             Manage your finance like a pro in no time
