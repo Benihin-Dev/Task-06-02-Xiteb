@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Loader from "./components/Loader";
-import MainPages from "./components/MainPages";
+import HomePage from "./components/HomePage";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -13,13 +13,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className=" font-ubuntu">
+    <div className=" font-ubuntu ">
       {showLoader && <Loader />}
-      {!showLoader && (
-        <div className="">
-          <MainPages />
-        </div>
-      )}
+      {!showLoader && <HomePage />}
     </div>
   );
 }
