@@ -1,15 +1,27 @@
-.custom::-webkit-scrollbar {
-  width: 4px;
-  height: 0px;
+body::-webkit-scrollbar {
+  width: 10px;
 }
 
-.custom::-webkit-scrollbar-thumb {
-  background-color: #d8d8d88e;
+body::-webkit-scrollbar-thumb {
+  background-color: #b0acacb6;
   border-radius: 2px;
 }
 
-.custom::-webkit-scrollbar-track {
-  background-color: #ffffff00;
+body::-webkit-scrollbar-track {
+  background-color: #ffffff10;
+}
+
+.customScrollBar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.customScrollBar::-webkit-scrollbar-thumb {
+  background-color: #b0acacb6;
+  border-radius: 2px;
+}
+
+.customScrollBar::-webkit-scrollbar-track {
+  background-color: #ffffff10;
 }
 
 .animated-component {
@@ -21,110 +33,4 @@
 .animated-component.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.slideFromRight {
-  animation: fromRight 0.3s ease-in-out;
-}
-
-@keyframes fromRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.loader {
-  animation: loader 1800ms linear;
-}
-
-@keyframes loader {
-  0% {
-    background: #40a5e7;
-    width: 5%;
-  }
-  30% {
-    background: #7971ed;
-    width: 30%;
-  }
-  60% {
-    background: #9c53f3;
-
-    width: 60%;
-  }
-  99% {
-    background: #9e52f2;
-    width: 90%;
-  }
-}
-
-.slideFromLeft {
-  animation: fromLeft 0.3s ease-in-out;
-}
-
-@keyframes fromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slideDown {
-  animation: slideDown 0.8s ease-in-out;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.loadingDot:first-child {
-  animation: addDotColor 400ms infinite alternate;
-}
-.loadingDot:nth-child(2) {
-  animation: addDotColor 400ms infinite alternate;
-  animation-delay: 200ms;
-}
-.loadingDot:nth-child(3) {
-  animation: addDotColor 400ms infinite alternate;
-  animation-delay: 400ms;
-}
-.loadingDot:nth-child(4) {
-  animation: addDotColor 400ms infinite alternate;
-  animation-delay: 600ms;
-}
-.loadingDot:nth-child(5) {
-  animation: addDotColor 400ms infinite alternate;
-  animation-delay: 600ms;
-}
-.loadingDot:nth-child(6) {
-  animation: addDotColor 400ms infinite alternate;
-  animation-delay: 600ms;
-}
-
-@keyframes addDotColor {
-  from {
-    background-color: #ffffff;
-    width: 8px;
-    height: 8px;
-  }
-  to {
-    background-color: rgb(184, 177, 177);
-    width: 8px;
-    height: 8px;
-  }
 }

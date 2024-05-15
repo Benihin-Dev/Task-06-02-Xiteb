@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat"],
-        mulish: ["Mulish"],
-        ubuntu: ["Ubuntu"],
+        poppins: ["Poppins"],
+        prata: ["Prata"],
       },
     },
   },
