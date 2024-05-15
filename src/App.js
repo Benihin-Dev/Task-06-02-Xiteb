@@ -35,14 +35,7 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
-  // const [showLoader, setShowLoader] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowLoader(false);
-  //   }, 1600);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
   return (
     <div className=" font-poppins">
       <NavBar scrollDirection={scrollDirection} />
