@@ -1,3 +1,3 @@
-.navLinkli{
-    @apply border-b-[2px]    duration-200 hover:border-[#50a192]  pb-[4px]
+.navLinkli {
+  @apply border-b-[2px] cursor-pointer duration-200 hover:border-[#50a192]  pb-[4px];
 }

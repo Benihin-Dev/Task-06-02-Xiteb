@@ -1,40 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { UseMainDataContext } from "../../dataContext/MainContext";
+import { useNavigate } from "react-router-dom";
 import { PiStarFill } from "react-icons/pi";
-import cartImg1 from "../../images/Image_1-300x197.jpg";
-import cartImg2 from "../../images/Image_2-300x197.jpg";
-import cartImg3 from "../../images/Image_4-300x197.jpg";
 
 export default function LuxuryVilla() {
   //luxuryVillaData
-  const [luxuryVillaData, setLuxuryVillaData] = useState([
-    {
-      name: "Historical Grand Family Villa Rio",
-      img: cartImg1,
-      oldPrice: "$18,600.00",
-      newPrice: "$16,500.00",
-      bedRoomCount: "7 Rooms",
-      squareFeet: 3226,
-      location: "89th St, London",
-    },
-    {
-      name: "Luxury Villa In Rego Park",
-      img: cartImg2,
-      oldPrice: null,
-      newPrice: "$125,500.00",
-      bedRoomCount: "8 Rooms",
-      squareFeet: 2256,
-      location: "54th St, London",
-    },
-    {
-      name: "Boutique Space Greenville",
-      img: cartImg3,
-      oldPrice: null,
-      newPrice: "$115,500.00",
-      bedRoomCount: "6 Rooms",
-      squareFeet: 4556,
-      location: "81th St, London",
-    },
-  ]);
+  const { luxuryVillaData, setIndexOfSelectedVillaForDetailedView } =
+    UseMainDataContext();
+  const navigate = useNavigate();
+
   return (
     <div className=" w-full py-10 sm:py-20 bg-[#f9f9f9] ">
       <div className=" w-11/12 sm:w-10/12 mx-auto">
@@ -51,9 +25,13 @@ export default function LuxuryVilla() {
           {luxuryVillaData.map((luxuryVilla, index) => (
             <div
               key={index}
-              className=" w-full duration-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md pb-8 bg-white "
+              onClick={() => {
+                setIndexOfSelectedVillaForDetailedView(index);
+                navigate("/villa");
+              }}
+              className=" cursor-pointer w-full duration-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md pb-8 bg-white "
             >
-              <img src={luxuryVilla.img} className=" w-full" alt="" />
+              <img src={luxuryVilla.img[0]} className=" w-full" alt="" />
               <p className=" font-prata mt-7 w-full px-3 text-center cursor-default">
                 {luxuryVilla.name}
               </p>
@@ -78,7 +56,7 @@ export default function LuxuryVilla() {
                 <div className=" flex items-center justify-between">
                   <p className=" text-gray-400 cursor-default">BEDROOM:</p>
                   <p className=" text-[#afafb1] cursor-default font-medium">
-                    {luxuryVilla.bedRoomCount}
+                    {luxuryVilla.rooms.bedRoomCount}
                   </p>
                 </div>
                 <div className=" flex items-center justify-between border-t border-b py-2">
