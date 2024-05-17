@@ -66,7 +66,7 @@ export default function SingleVillaPage() {
                   >
                     <div className=" cursor-pointer w-full sm:w-fit px-10 py-1  flex rounded bg-[#078169] hover:bg-[#256559] duration-200 text-white items-center justify-center gap-1">
                       <FaRegBookmark />
-                      <p>Reserve now</p>
+                      <p className=" text-base">Reserve now</p>
                     </div>
                   </Link>
                 </div>
