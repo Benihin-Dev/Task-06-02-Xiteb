@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./product.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { GiCheckMark } from "react-icons/gi";
@@ -8,7 +8,6 @@ import { RiCloseFill } from "react-icons/ri";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { TbAlertCircleFilled } from "react-icons/tb";
-import ViewDetails from "./ViewDetails";
 
 export default function ProductCreate() {
   //data & state values for the form
@@ -77,6 +76,12 @@ export default function ProductCreate() {
 
     if (files.length > 6) {
       console.log("Something Wrong!..");
+      setToasterDetails({
+        state: true,
+        toasterType: "alert",
+        message: "Image limit is 6 !.",
+      });
+      e.target.value = [];
       return;
     }
 
@@ -89,6 +94,12 @@ export default function ProductCreate() {
 
     if (newSubImages.length + files.length > 5) {
       console.log("Something Wrong!..");
+      setToasterDetails({
+        state: true,
+        toasterType: "failed",
+        message: "Image limit was Exist",
+      });
+      e.target.value = [];
       return;
     }
 
@@ -297,7 +308,7 @@ export default function ProductCreate() {
                   )}
                 </div>
                 <div className=" flex items-center pt-4 gap-5">
-                  <p className="lable">Forigen Country Delivery : </p>
+                  <p className="lable">Foreign Country Delivery : </p>
                   <div className=" ">
                     <div className=" flex border  ">
                       <p
