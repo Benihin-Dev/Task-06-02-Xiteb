@@ -1,7 +1,0 @@
-.footerSocilaMediaLink{
-    @apply text-gray-200 hover:text-[#078169]
-}
-
-.footerNavLink{
-    @apply text-sm text-gray-300 hover:text-[#078169] cursor-pointer
-}

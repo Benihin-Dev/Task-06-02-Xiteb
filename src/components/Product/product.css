@@ -1,0 +1,11 @@
+.lable {
+  @apply text-gray-600 cursor-default;
+}
+
+.textInput {
+  @apply border shadow-sm w-full px-3 rounded duration-200 focus:border-green-500 outline-none py-[5px] hover:border-gray-300;
+}
+
+.toasterStyle {
+  @apply relative   cursor-default bg-[#fcfcfce1] border-l-[5px] flex w-fit shadow-gray-400 items-center shadow gap-2 my-3 mr-1 text-sm pl-3 pr-16 pb-1 pt-2 rounded-sm;
+}

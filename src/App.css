@@ -12,11 +12,11 @@ body::-webkit-scrollbar-track {
 }
 
 .customScrollBar::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 .customScrollBar::-webkit-scrollbar-thumb {
-  background-color: #b0acacb6;
+  background-color: #c3c1c1b6;
   border-radius: 2px;
 }
 
@@ -37,17 +37,6 @@ body::-webkit-scrollbar-track {
   background-color: #ffffff10;
 }
 
-.animated-component {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.5s, transform 0.3s;
-}
-
-.animated-component.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .slideFromRight {
   animation: fromRight 0.5s ease-in-out;
 }
@@ -60,5 +49,36 @@ body::-webkit-scrollbar-track {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.toasterAnimation {
+  animation: toasterAnimation 5s ease-in-out 1;
+}
+
+@keyframes toasterAnimation {
+  0% {
+    transform: translateY(-7px);
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(7px);
+    opacity: 50;
+  }
+  10% {
+    transform: translateY(0px);
+    opacity: 100;
+  }
+  80% {
+    transform: translateX(0px);
+    opacity: 10;
+  }
+  95% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(99999px);
+    opacity: 0;
   }
 }
