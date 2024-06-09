@@ -3,20 +3,20 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #b0acacb6;
+  background-color: #ededed55;
   border-radius: 2px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #ffffff10;
+  background-color: #ffffff00;
 }
 
 .customScrollBar::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
 }
 
 .customScrollBar::-webkit-scrollbar-thumb {
-  background-color: #c3c1c1b6;
+  background-color: #ecececb6;
   border-radius: 2px;
 }
 
@@ -38,13 +38,13 @@ body::-webkit-scrollbar-track {
 }
 
 .slideFromRight {
-  animation: fromRight 0.5s ease-in-out;
+  animation: fromRight 0.2s ease-in-out;
 }
 
 @keyframes fromRight {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(30px);
   }
   to {
     opacity: 1;
@@ -52,33 +52,17 @@ body::-webkit-scrollbar-track {
   }
 }
 
-.toasterAnimation {
-  animation: toasterAnimation 5s ease-in-out 1;
+.slideUp {
+  animation: slideUp 0.4s ease-in-out;
 }
 
-@keyframes toasterAnimation {
-  0% {
-    transform: translateY(-7px);
+@keyframes slideUp {
+  from {
     opacity: 0;
+    transform: translateY(30px);
   }
-  5% {
-    transform: translateY(7px);
-    opacity: 50;
-  }
-  10% {
-    transform: translateY(0px);
-    opacity: 100;
-  }
-  80% {
-    transform: translateX(0px);
-    opacity: 10;
-  }
-  95% {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(99999px);
-    opacity: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
