@@ -15,7 +15,7 @@ export default function OfferBanner() {
         autoplaySpeed: 5000,
       });
   return (
-    <div className=" w-full overflow-hidden h-32 sm:h-52 pt-12 sm:pt-[56px]">
+    <div className=" w-full overflow-hidden h-32 sm:h-52 pt-[58px] sm:pt-[60px]">
     <Slider {...settings}>
       <Slide>
         <img

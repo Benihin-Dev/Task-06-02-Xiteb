@@ -145,13 +145,13 @@ export default function SliderForProducts({ data }) {
           </Slider>
 
           <div
-            className="  absolute top-[60%] sm:top-[50%] left-1 py-2 hover:text-white hover:bg-gray-200 hover:left-0 border border-gray-200 rounded-sm bg-[#eeededbe]"
+            className="  absolute top-[60%] sm:top-[50%] left-1 py-3  pl-1 hover:text-white hover:bg-gray-200 hover:left-0 border border-gray-200 rounded-sm bg-[#eeededbe]"
             onClick={handlePrevSlide}
           >
             <IoIosArrowForward className="text-gray-400 rotate-180 size-5" />
           </div>
           <div
-            className="  absolute top-[60%] sm:top-[50%] right-1 py-2   hover:bg-gray-200 hover:right-0 border border-gray-200 rounded-sm bg-[#eeededbe]"
+            className="  absolute top-[60%] sm:top-[50%] right-1 py-3 pl-1   hover:bg-gray-200 hover:right-0 border border-gray-200 rounded-sm bg-[#eeededbe]"
             onClick={handleNextSlide}
           >
             <IoIosArrowForward className="text-gray-400 size-6" />

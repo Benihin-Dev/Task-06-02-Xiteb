@@ -28,7 +28,7 @@ export default function NavBar() {
           />
         </div>
 
-        <div className=" flex items-center justify-center px-2 py-1 rounded-full  bg-[#ffffffe9] border border-[#d1bcfe] hover:border-[#ad8bf6] duration-200">
+        <div className=" flex items-center justify-center px-2 py-2 rounded-full  bg-[#ffffffe9] border border-[#d1bcfe] hover:border-[#ad8bf6] duration-200">
           <SlMagnifier className=" cursor-pointer text-[#db44448b] hover:text-[#ac4848]" />
           <input
             className=" sm:w-60 lg:w-80 mr-2 w-full sm:text-sm text-xs outline-none bg-transparent border-none px-2"
