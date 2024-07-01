@@ -1,0 +1,7 @@
+.socialMedia {
+  @apply border rounded-sm border-gray-300 p-1 hover:text-white duration-200;
+}
+
+.footerLink {
+  @apply cursor-pointer hover:text-[#ffad33] duration-200;
+}

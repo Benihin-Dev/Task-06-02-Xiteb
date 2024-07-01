@@ -1,9 +1,10 @@
+/* scrollbar Styles  */
 body::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ededed55;
+  background-color: #b9eaff81;
   border-radius: 2px;
 }
 
@@ -16,8 +17,8 @@ body::-webkit-scrollbar-track {
 }
 
 .customScrollBar::-webkit-scrollbar-thumb {
-  background-color: #ecececb6;
-  border-radius: 2px;
+  background-color: #dad8d87e;
+  border-radius: 0px;
 }
 
 .customScrollBar::-webkit-scrollbar-track {
@@ -37,6 +38,7 @@ body::-webkit-scrollbar-track {
   background-color: #ffffff10;
 }
 
+/* transition animations */
 .slideFromRight {
   animation: fromRight 0.2s ease-in-out;
 }
@@ -45,6 +47,21 @@ body::-webkit-scrollbar-track {
   from {
     opacity: 0;
     transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideFromLeft {
+  animation: fromLeft 0.2s ease-in-out;
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
@@ -65,4 +82,49 @@ body::-webkit-scrollbar-track {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.animated-component2Up {
+  transform: translateY(40px);
+  transition: transform 0.5s;
+}
+
+.animated-component2Up.is-visible {
+  transform: translateY(0);
+}
+
+.animated-component2Right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: transform 0.5s;
+}
+
+.animated-component2Right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animated-component2Left {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: transform 0.5s;
+}
+
+.animated-component2Left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* colors */
+.themeColorForBG {
+  background: linear-gradient(270deg, #41c494, #19878b);
+}
+
+.themeColor {
+  background: linear-gradient(140deg, #5cdaab, #3bb3b7);
+}
+.showFullHeight {
+  animation: heightIncrease 5s ease-in infinite;
+  width: 200px;
+  height: 200px;
+  background: #000;
 }
