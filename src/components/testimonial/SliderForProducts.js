@@ -86,7 +86,7 @@ export default function SliderForProducts({ data }) {
             ]}
           >
             {slides.map((item, index) => (
-              <div className=" w-full     ">
+              <div key={index} className=" w-full     ">
                 <div className=" border rounded-sm shadow-md mb-2   bg-white p-4 mx-2 sm:mx-3 md:mx-4 lg:mx-5">
                   <div className="flex items-start justify-start pb-3 ">
                     <div className="flex">

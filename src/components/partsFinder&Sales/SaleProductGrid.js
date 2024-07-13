@@ -4,7 +4,10 @@ export default function SaleProductGrid({ data }) {
   return (
     <div className=" w-full sm:w-2/3 lg:w-3/4 sm:grid-cols-4 grid grid-cols-2 gap-5 p-5 sm:p-3 lg:p-5">
       {data.map((item, index) => (
-        <div className=" relative w-full border bg-white shadow   border-gray-200 hover:shadow-gray-400  duration-200 p-3 ">
+        <div
+          key={index}
+          className=" relative w-full border bg-white shadow   border-gray-200 hover:shadow-gray-400  duration-200 p-3 "
+        >
           <div className=" w-full flex items-center justify-center">
             <img
               src={item.image}
